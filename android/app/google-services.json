@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "282453630191",
+    "project_id": "ddm-books-club",
+    "storage_bucket": "ddm-books-club.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282453630191:android:66d8b769277e87f7750f1a",
+        "android_client_info": {
+          "package_name": "com.example.booksclub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmJnXzI-oh3zPdKGSVqUy9duHRjAncwu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
