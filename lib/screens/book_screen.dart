@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import '../components/group_list.dart';
+import '../components/book_list.dart';
 import '../components/bottom_navigation.dart';
-import '../models/group.dart';
-import 'group_details_screen.dart';
-import 'manage_group_screen.dart';
+import '../models/book.dart';
+import 'book_details_screen.dart';
+import 'manage_book_screen.dart';
 
-class GroupListScreen extends StatefulWidget {
-  static const routeName = '/groups';
+class BookListScreen extends StatefulWidget {
+  static const routeName = '/books';
 
   @override
-  _GroupListScreenState createState() => _GroupListScreenState();
+  _BookListScreenState createState() => _BookListScreenState();
 }
 
-class _GroupListScreenState extends State<GroupListScreen> {
-  int _selectedIndex = 1;
+class _BookListScreenState extends State<BookListScreen> {
+  int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     if (index != _selectedIndex) {
       switch (index) {
-        case 0:
-          Navigator.of(context).pushReplacementNamed('/books');
+        case 1:
+          Navigator.of(context).pushReplacementNamed('/groups');
           break;
         case 2:
           Navigator.of(context).pushReplacementNamed('/profile');
@@ -32,21 +32,21 @@ class _GroupListScreenState extends State<GroupListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Grupos'),
+        title: Text('Livros'),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
             onPressed: () {
-              Navigator.of(context).pushNamed(ManageGroupScreen.routeName);
+              Navigator.of(context).pushNamed(ManageBookScreen.routeName);
             },
           ),
         ],
       ),
-      body: GroupList(
-        onTap: (group) {
+      body: BookList(
+        onTap: (book) {
           Navigator.of(context).pushNamed(
-            GroupDetailsScreen.routeName,
-            arguments: group,
+            BookDetailsScreen.routeName,
+            arguments: book,
           );
         },
       ),

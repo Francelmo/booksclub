@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
+import '../data/data.dart';
 import '../models/group.dart';
 
 class GroupProvider with ChangeNotifier {
   // final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  List<Group> _groups = [];
+  List<Group> _groups = sampleGroups;
 
   List<Group> get groups => _groups;
 

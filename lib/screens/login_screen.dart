@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       await Provider.of<UserProvider>(context, listen: false)
           .login(_emailController.text, _passwordController.text);
-      Navigator.of(context).pushReplacementNamed('/main');
+      Navigator.of(context).pushReplacementNamed('/profile'); // Corrija a rota aqui
     } catch (error) {
       setState(() {
         _errorMessage = error.toString();

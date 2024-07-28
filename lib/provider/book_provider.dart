@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
+import '../data/data.dart';
 import '../models/book.dart';
 
 class BookProvider with ChangeNotifier {
   // final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  List<Book> _books = [];
+  List<Book> _books = sampleBooks;
 
   List<Book> get books => _books;
 
